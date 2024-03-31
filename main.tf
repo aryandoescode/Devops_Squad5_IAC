@@ -6,8 +6,8 @@ provider "azurerm" {
 module "vm1" {
   source = "./modules/JenkinsVM"
 
-prefix   = mitesh
-location = eastus
+prefix   = var.prefix
+location = var.location
 
 }
 
@@ -15,7 +15,7 @@ location = eastus
 module "vm2" {
   source = "./modules/SonarVM"
 
-prefix   = mitesh1
-location = eastus
+prefix   = var.prefix
+location = var.location
 
 }
