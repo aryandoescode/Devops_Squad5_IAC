@@ -16,7 +16,7 @@ data "azurerm_virtual_network" "existing_vnet" {
 }
 
 resource "azurerm_subnet" "internal" {
-  name                 = "internal"
+  name                 = "internal2"
   resource_group_name  = data.azurerm_virtual_network.existing_vnet.resource_group_name
   virtual_network_name = data.azurerm_virtual_network.existing_vnet.name
   address_prefixes       = ["10.0.4.0/24"]
