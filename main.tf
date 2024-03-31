@@ -15,7 +15,7 @@ location = var.location
 module "vm2" {
   source = "./modules/SonarVM"
 
-prefix   = var.prefix
+prefix   = var.prefix2
 location = var.location
 
 }
