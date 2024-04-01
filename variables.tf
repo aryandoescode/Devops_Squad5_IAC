@@ -22,3 +22,7 @@ variable "aks" {
   description = "Prefix to be used for naming resources"
   type        = string
 }
+variable "location2" {
+  description = "Prefix to be used for naming resources"
+  type        = string
+}
