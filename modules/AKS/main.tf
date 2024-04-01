@@ -4,7 +4,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix}-k8s-resources"
-  location = var.location
+  location = var.location2
 }
 
 resource "azurerm_kubernetes_cluster" "example" {
