@@ -31,6 +31,6 @@ module "AKS" {
   source = "./modules/AKS"
 
 prefix   = var.aks
-location = var.location2
+location2 = var.location2
 
 }
