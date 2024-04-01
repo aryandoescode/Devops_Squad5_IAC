@@ -6,7 +6,7 @@ provider "azurerm" {
 module "vm1" {
   source = "./modules/JenkinsVM"
 
-prefix   = var.jenkis
+prefix   = var.jenkins
 location = var.location
 
 }
