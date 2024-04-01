@@ -1,5 +1,3 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
 
 provider "azurerm" {
   features {}
@@ -19,7 +17,7 @@ resource "azurerm_subnet" "internal" {
   name                 = "internal2"
   resource_group_name  = data.azurerm_virtual_network.existing_vnet.resource_group_name
   virtual_network_name = data.azurerm_virtual_network.existing_vnet.name
-  address_prefixes       = ["10.0.4.0/24"]
+  address_prefixes       = ["10.0.5.0/24"]
 }
 
 resource "azurerm_public_ip" "pip" {
@@ -38,7 +36,7 @@ resource "azurerm_network_interface" "main" {
     name                          = "primary"
     subnet_id                     = azurerm_subnet.internal.id
     private_ip_address_allocation = "Static"
-    private_ip_address            = "10.0.4.10"
+    private_ip_address            = "10.0.5.10"
     public_ip_address_id          = azurerm_public_ip.pip.id
   }
 }
