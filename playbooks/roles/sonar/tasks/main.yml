@@ -45,4 +45,7 @@
     append: yes
 
 - name: Run SonarQube container
-  shell: docker run -d --name sonarqube --restart always -p 9000:9000 sonarqube
+  shell: docker volume create volume2
+
+- name: Run SonarQube container
+  shell: docker run -d --name sonarqube --restart always -p 9000:9000 -v volume2:/opt/sonarqube/data sonarqube
