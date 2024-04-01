@@ -2,16 +2,16 @@ provider "azurerm" {
   features {}
 }
 
-
-module "vm1" {
+/*
+module "jenkins" {
   source = "./modules/JenkinsVM"
 
 prefix   = var.jenkins
 location = var.location
 
 }
-
-module "vm2" {
+*/
+module "sonar" {
   source = "./modules/SonarVM"
 
 prefix   = var.sonar
@@ -19,7 +19,7 @@ location = var.location
 
 }
 
-module "vm3" {
+module "tomcat" {
   source = "./modules/TomcatVM"
 
 prefix   = var.tomcat
