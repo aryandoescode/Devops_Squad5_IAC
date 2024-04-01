@@ -2,20 +2,35 @@ provider "azurerm" {
   features {}
 }
 
-# Module for VM1
+
 module "vm1" {
   source = "./modules/JenkinsVM"
 
-prefix   = var.prefix
+prefix   = var.jenkis
 location = var.location
 
 }
 
-# Module for VM2
 module "vm2" {
   source = "./modules/SonarVM"
 
-prefix   = var.prefix2
+prefix   = var.sonar
+location = var.location
+
+}
+
+module "vm3" {
+  source = "./modules/TomcatVM"
+
+prefix   = var.tomcat
+location = var.location
+
+}
+
+module "AKS" {
+  source = "./modules/AKS"
+
+prefix   = var.aks
 location = var.location
 
 }
