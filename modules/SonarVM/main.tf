@@ -82,7 +82,7 @@ resource "azurerm_network_security_group" "webserver" {
     destination_address_prefix = "*"
   }
   security_rule {
-    name                       = "allow_http"
+    name                       = "allow_sonar"
     priority                   = 130
     direction                  = "Inbound"
     access                     = "Allow"
