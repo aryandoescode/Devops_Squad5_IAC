@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "main" {
 
 data "azurerm_virtual_network" "existing_vnet" {
   name                = "jenkinsMaster-vnet"
-  resource_group_name = "jenkinsMasterRG"
+  resource_group_name = "jenkinsMaster_group"
 }
 
 resource "azurerm_subnet" "internal" {
