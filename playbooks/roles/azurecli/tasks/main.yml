@@ -1,0 +1,15 @@
+---
+- name: Install prerequisites
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg
+      - lsb-release
+      - software-properties-common
+    state: present
+    update_cache: yes
+    
+- name: Install azure cli
+  shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
