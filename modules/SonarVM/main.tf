@@ -127,7 +127,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   provisioner "local-exec" {
     command = <<EOT
       echo 'sonar ansible_host=${azurerm_linux_virtual_machine.main.public_ip_address} ansible_connection=ssh ansible_user=adminuser' >> inventory
-
+      echo 'localhost ansible_connection=local' >> inventory
 EOT
   }
 

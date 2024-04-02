@@ -32,19 +32,19 @@
   roles:
     - docker
   
-- name: Azure cli installation
-  hosts: localhost
-  become: yes
-  become_method: sudo
-  gather_facts: true
-  roles:
-    - azurecli
+# - name: Azure cli installation
+#   hosts: localhost
+#   become: yes
+#   become_method: sudo
+#   gather_facts: true
+#   roles:
+#     - azurecli
 
-- name: Jenkins deployment
-  hosts: localhost
-  become: yes
-  gather_facts: true
-  become_method: sudo
-  roles:
-    - jenkins
+# - name: Jenkins deployment
+#   hosts: localhost
+#   become: yes
+#   gather_facts: true
+#   become_method: sudo
+#   roles:
+#     - jenkins
 
