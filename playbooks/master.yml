@@ -24,13 +24,13 @@
   roles:
     - sonar
 
-- name: Docker installation
-  hosts: localhost
-  become: yes
-  become_method: sudo
-  gather_facts: true
-  roles:
-    - docker
+# - name: Docker installation
+#   hosts: localhost
+#   become: yes
+#   become_method: sudo
+#   gather_facts: true
+#   roles:
+#     - docker
   
 # - name: Azure cli installation
 #   hosts: localhost
